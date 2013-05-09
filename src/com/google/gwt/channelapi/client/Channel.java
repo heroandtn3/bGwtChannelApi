@@ -27,10 +27,6 @@ public class Channel {
 		this.clientId = clientId;
 	}
 
-	public void addChannelListener(ChannelListener channelListener) {
-		this.channelListener = channelListener;
-	}
-
 	public void sendMessage(String clientId, String message) {
 		gwtChannelService.sendMessage(clientId, message,
 				new AsyncCallback<Void>() {
@@ -45,7 +41,8 @@ public class Channel {
 				});
 	}
 
-	public void join() {
+	public void join(ChannelListener channelListener) {
+		this.channelListener = channelListener;
 		if (channelListener == null)
 			throw new NullPointerException();
 		gwtChannelService.getToken(clientId, new AsyncCallback<String>() {

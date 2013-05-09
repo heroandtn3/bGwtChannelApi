@@ -54,7 +54,7 @@ public class GwtChannelApi implements EntryPoint {
 
 	private void createChannel(String clientId) {
 		channel = new Channel(clientId);
-		channel.addChannelListener(new ChannelListener() {
+		channel.join(new ChannelListener() {
 
 			@Override
 			public void onOpen() {
@@ -80,6 +80,5 @@ public class GwtChannelApi implements EntryPoint {
 
 			}
 		});
-		channel.join();
 	}
 }
