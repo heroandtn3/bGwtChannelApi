@@ -3,6 +3,8 @@
  */
 package com.google.gwt.channelapi.client;
 
+import com.google.gwt.channelapi.shared.GwtChannelService;
+import com.google.gwt.channelapi.shared.GwtChannelServiceAsync;
 import com.google.gwt.core.shared.GWT;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.google.gwt.channelapi.client;
+package com.google.gwt.channelapi.shared;
 
 import com.google.gwt.user.client.rpc.AsyncCallback;
 
